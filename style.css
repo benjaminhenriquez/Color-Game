@@ -1,10 +1,8 @@
 body {
-  background-color: #232323;
-}
+  background-color: #232323; }
 
-p{
-  color: green;
-}
+p {
+  color: green; }
 
 .square {
   width: 10%;
@@ -13,5 +11,6 @@ p{
   margin: 10px;
   border: solid;
   border-color: black;
-  float: left;
-}
+  float: left; }
+
+/*# sourceMappingURL=style.css.map */
