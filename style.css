@@ -1,0 +1,17 @@
+body {
+  background-color: #232323;
+}
+
+p{
+  color: green;
+}
+
+.square {
+  width: 10%;
+  background: purple;
+  padding-top: 10%;
+  margin: 10px;
+  border: solid;
+  border-color: black;
+  float: left;
+}
