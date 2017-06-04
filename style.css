@@ -1,16 +1,15 @@
 body {
   background-color: #232323; }
 
-p {
-  color: green; }
-
 .square {
-  width: 10%;
+  width: 30%;
   background: purple;
-  padding-top: 10%;
-  margin: 10px;
-  border: solid;
-  border-color: black;
+  padding-bottom: 30%;
+  margin: 1.66%;
   float: left; }
+
+#container {
+  margin: 0 auto;
+  max-width: 600px; }
 
 /*# sourceMappingURL=style.css.map */
