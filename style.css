@@ -26,9 +26,19 @@ p {
   background: #96fac8;
   color: #323232; }
 
-#message {
-  background-color: #fafafa;
+#stripe {
+  background-color: #f0f0f0;
   color: #323232; }
+
+#container {
+  margin: 0 auto;
+  max-width: 600px; }
+
+.on {
+  background: #96fac8; }
+
+.level {
+  padding: 1%; }
 
 .square {
   width: 30%;
@@ -46,9 +56,5 @@ p {
 
 .B {
   color: blue; }
-
-#container {
-  margin: 0 auto;
-  max-width: 600px; }
 
 /*# sourceMappingURL=style.css.map */
