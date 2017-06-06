@@ -34,11 +34,10 @@ p {
   margin: 0 auto;
   max-width: 600px; }
 
-.on {
-  background: #96fac8; }
-
 .level {
-  padding: 1%; }
+  padding: 1%;
+  padding-top: 0;
+  background-color: #f0f0f0; }
 
 .square {
   width: 30%;
