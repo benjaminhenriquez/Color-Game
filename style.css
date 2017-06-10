@@ -1,5 +1,5 @@
 body {
-  background-color: #323232;
+  background-color: #969696;
   color: #fafafa;
   text-align: center;
   margin: 0;
@@ -23,8 +23,8 @@ p {
   font-size: 150%; }
 
 #header {
-  background: #96fac8;
-  color: #323232; }
+  background-color: "rgb(50, 50, 50)";
+  color: #fafafa; }
 
 #stripe {
   background-color: #f0f0f0;
@@ -46,6 +46,12 @@ p {
   margin-top: 4%;
   float: left;
   border-radius: 10px; }
+
+.on {
+  background-color: #969696; }
+
+.off {
+  background-color: #f0f0f0; }
 
 .R {
   color: red; }

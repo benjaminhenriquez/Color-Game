@@ -11,7 +11,6 @@ var colors = [
 ];
 
 var level = 6;
-document.querySelector(".on").style.backgroundColor = "rgb(150, 250, 200)";
 var newColors = generateRandomColors(level);
 var squares = document.querySelectorAll(".square");
 var colorDisplay = document.querySelector("#colorDisplay");
@@ -47,7 +46,10 @@ function assignColors(){
       if( clickedColor === pickedColor){
         messageDisplay.textContent = "Correct";
         changeColors(clickedColor);
-        document.querySelector(".on").style.backgroundColor = pickedColor
+        document.querySelector(".on").style.backgroundColor = pickedColor;
+        document.querySelector(".R").style.color = "rgb(50, 50, 50)";
+        document.querySelector(".G").style.color = "rgb(50, 50, 50)";
+        document.querySelector(".B").style.color = "rgb(50, 50, 50)";
         header.style.backgroundColor = clickedColor;
         header.style.color = "rgb(50, 50, 50)";
         var rgb = document.querySelectorAll("#squares")
@@ -64,6 +66,16 @@ function assignColors(){
 }
 
 function changeLevel(num){
+  function resetHeaderColor(){
+    document.querySelector("#header").style.backgroundColor = "rgb(50, 50, 50)"
+    document.querySelector("#header").style.color = "rgb(250, 250, 250)";
+    document.querySelector(".on").style.backgroundColor = "rgb(50, 50, 50)";
+    document.querySelectorAll(".off")[0].style.backgroundColor = "rgb(240, 240, 240)";
+    document.querySelectorAll(".off")[1].style.backgroundColor = "rgb(240, 240, 240)";
+    document.querySelector(".R").style.color = "rgb(255, 0, 0)";
+    document.querySelector(".G").style.color = "rgb(0, 255, 0)";
+    document.querySelector(".B").style.color = "rgb(0, 0, 255)";
+  }
   var container = document.querySelector("#container")
   var html =  "<div class='square'></div><div class='square'></div><div class='square'></div>"
   if(num === 3){
@@ -71,27 +83,39 @@ function changeLevel(num){
     container.innerHTML = html;
     squares = document.querySelectorAll(".square");
     medium.classList.remove("on")
+    medium.classList.add("off")
     hard.classList.remove("on")
+    hard.classList.add("off")
     easy.classList.add("on")
+    easy.classList.remove("off")
     assignColors();
+    resetHeaderColor();
   }
   else if (num === 6){
     level = 6;
     container.innerHTML = html + html;
     squares = document.querySelectorAll(".square");
     easy.classList.remove("on")
+    easy.classList.add("off")
     hard.classList.remove("on")
+    hard.classList.add("off")
     medium.classList.add("on")
+    medium.classList.remove("off")
     assignColors();
+    resetHeaderColor();
   }
   else if (num === 9) {
     level = 9;
     container.innerHTML = html + html + html;
     squares = document.querySelectorAll(".square");
-    medium.classList.remove("on")
-    easy.classList.remove("on")
-    hard.classList.add("on")
+    medium.classList.remove("on");
+    medium.classList.add("off");
+    easy.classList.remove("on");
+    easy.classList.add("off")
+    hard.classList.add("on");
+    hard.classList.remove("off")
     assignColors();
+    resetHeaderColor();
   }
 }
 
