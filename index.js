@@ -1,3 +1,5 @@
+//variables
+
 var colors = [
   "rgb(255, 0, 0)",
   "rgb(0, 255, 0)",
@@ -9,11 +11,9 @@ var colors = [
   "rgb(255, 0, 255)",
   "rgb(255, 255, 255)"
 ];
-
 var black = "rgb(50, 50, 50)";
 var white = "rgb(250, 250, 250)";
 var level = 6;
-var newColors = generateRandomColors(level);
 var squares = document.querySelectorAll(".square");
 var colorDisplay = document.querySelector("#colorDisplay");
 var messageDisplay = document.querySelector("#message");
@@ -24,10 +24,13 @@ var easy = document.querySelector("#easy")
 var medium = document.querySelector("#medium")
 var hard = document.querySelector("#hard")
 
-easy.addEventListener("click", function(){changeLevel(3)});
-medium.addEventListener("click", function(){changeLevel(6)});
-hard.addEventListener("click", function(){changeLevel(9)});
-reset.addEventListener("click",function(){generateRandomColors()
+//on page load
+
+easy.addEventListener("click", function(){changeLevel(3);});
+medium.addEventListener("click", function(){changeLevel(6);});
+hard.addEventListener("click", function(){changeLevel(9);});
+reset.addEventListener("click",function(){
+  generateRandomColors();
   assignColors();})
 
 assignColors();
@@ -47,10 +50,6 @@ function assignColors(){
         changeColors(clickedColor);
         header.style.backgroundColor = clickedColor;
         header.style.color = black;
-        var rgb = document.querySelectorAll("#squares")
-        for(var i = 0; i < level; i++){
-          rgb[i].style.color = black;
-        }
       }
       else {
         this.style.backgroundColor = black;
@@ -64,9 +63,6 @@ function changeLevel(num){
   function resetHeaderColor(){
     document.querySelector("#header").style.backgroundColor = black
     document.querySelector("#header").style.color = white;
-    // document.querySelector(".on").style.backgroundColor = black;
-    // document.querySelectorAll(".off")[0].style.backgroundColor = black;
-    // document.querySelectorAll(".off")[1].style.backgroundColor = black;
   }
   var container = document.querySelector("#container")
   var html =  "<div class='square'></div><div class='square'></div><div class='square'></div>"
@@ -74,12 +70,6 @@ function changeLevel(num){
     level = 3;
     container.innerHTML = html;
     squares = document.querySelectorAll(".square");
-    // medium.classList.remove("on")
-    // medium.classList.add("off")
-    // hard.classList.remove("on")
-    // hard.classList.add("off")
-    // easy.classList.add("on")
-    // easy.classList.remove("off")
     assignColors();
     resetHeaderColor();
   }
@@ -87,12 +77,6 @@ function changeLevel(num){
     level = 6;
     container.innerHTML = html + html;
     squares = document.querySelectorAll(".square");
-    // easy.classList.remove("on")
-    // easy.classList.add("off")
-    // hard.classList.remove("on")
-    // hard.classList.add("off")
-    // medium.classList.add("on")
-    // medium.classList.remove("off")
     assignColors();
     resetHeaderColor();
   }
@@ -100,12 +84,6 @@ function changeLevel(num){
     level = 9;
     container.innerHTML = html + html + html;
     squares = document.querySelectorAll(".square");
-    // medium.classList.remove("on");
-    // medium.classList.add("off");
-    // easy.classList.remove("on");
-    // easy.classList.add("off")
-    // hard.classList.add("on");
-    // hard.classList.remove("off")
     assignColors();
     resetHeaderColor();
   }
@@ -123,15 +101,14 @@ function changeColors(color){
   }
 }
 
-
-
-//not used yet
-
 function generateRandomColors(num){
   colors = []
   for(var i = 0; i < 9; i++){
     colors.push(randomColor())
   }
+  reset.classList.add("hidden")
+  document.querySelector("#header").style.backgroundColor = black
+  document.querySelector("#header").style.color = white;
 }
 
 function randomColor(){
