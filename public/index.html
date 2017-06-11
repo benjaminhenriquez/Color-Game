@@ -2,16 +2,22 @@
 <html>
 
   <head>
+
     <title> RGB Color Game </title>
-    <link rel="shortcut icon" href="colors.png"/>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="shortcut icon" href="resources/images/colors.png"/>
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="resources/sass_css/style.css"/>
+
   </head>
 
   <body>
+
     <div id="header">
       <h2> RGB Color Game </h2>
       <h1 id="colorDisplay"></h1>
     </div>
+
     <div id="stripe">
       <p>
         <span id="message">Guess Color</span>
@@ -21,10 +27,11 @@
         <span class="button" id="medium">Medium</span>
         <span class="button" id="hard">Hard</span>
       </p>
-    <p>
-      <span class="button hidden" id="reset">Generate New Colors</span>
-    </p>
+      <p>
+        <span class="button hidden" id="reset">Generate New Colors</span>
+      </p>
     </div>
+
     <div id="container">
       <div class="square"></div>
       <div class="square"></div>
@@ -33,7 +40,9 @@
       <div class="square"></div>
       <div class="square"></div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+
+    <script type="text/javascript" src="resources/js/index.js"></script>
+
   </body>
 
 </html>
