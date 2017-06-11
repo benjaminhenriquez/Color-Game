@@ -65,7 +65,7 @@ function changeLevel(num){
     document.querySelector("#header").style.color = white;
   }
   var container = document.querySelector("#container")
-  var html =  "<div class='square'></div><div class='square'></div><div class='square'></div>"
+  var html =  "<div class='row'><div class='square'></div><div class='square'></div><div class='square'></div></div>"
   if(num === 3){
     level = 3;
     container.innerHTML = html;
