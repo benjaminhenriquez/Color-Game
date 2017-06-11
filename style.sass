@@ -1,6 +1,11 @@
+//variables
+$grey: rgb(150, 150, 150)
+$white: rgb(250, 250, 250)
+$black: rgb(50, 50, 50)
+
 body
-  background-color: rgb(150, 150, 150)
-  color: rgb(250, 250, 250)
+  background-color: $black
+  color: $white
   text-align: center
   margin: 0
   padding: 0
@@ -23,21 +28,29 @@ p
   font-size: 150%
 
 #header
-  background-color: "rgb(50, 50, 50)"
-  color: rgb(250, 250, 250)
+  background-color: $black
+  color: $white
 
 #stripe
-  background-color: rgb(240, 240, 240)
-  color: rgb(50, 50, 50)
+  background-color: $black
+  color: $white
 
 #container
   margin: 0 auto
   max-width: 600px
 
-.level
+
+.hidden
+  display: none
+
+.button
   padding: 1%
   padding-top: 0
-  background-color: rgb(240, 240, 240)
+  border: solid white 1px
+
+
+.button:hover
+  background-color: rgb(100,100,100)
 
 .square
   width: 30%
@@ -47,12 +60,14 @@ p
   float: left
   border-radius: 10px
 
-.on
-  background-color: rgb(150, 150, 150)
-
-
-.off
-  background-color: rgb(240, 240, 240)
+// .on
+//   background-color: $black
+//   color: $white
+//
+//
+// .off
+//   background-color: $white
+//   color: $black
 
 
 .R
